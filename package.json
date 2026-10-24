@@ -1,0 +1,69 @@
+{
+  "name": "dsh-tool-cleversee",
+  "version": "0.1.2",
+  "description": "DSH tools for Alibaba Cloud CleverSee retrieval: web_search_CleverSee_deep (联网搜索·搜文 /search/unified) and web_search_CleverSee_image (联网多模态搜索·文搜图 /search/multimodal), plus an optional ctx.web search provider.",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./core": "./lib/core.js",
+    "./record": "./lib/record.js",
+    "./package.json": "./package.json"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh-credentials": "*",
+    "@deepseek-ai/dsh-launch-environment": "*",
+    "@deepseek-ai/dsh-tools": "*",
+    "@deepseek-ai/dsh-web": "*",
+    "@deepseek-ai/schemastery": "*"
+  },
+  "peerDependenciesMeta": {
+    "@deepseek-ai/dsh-credentials": {
+      "optional": true
+    },
+    "@deepseek-ai/dsh-launch-environment": {
+      "optional": true
+    },
+    "@deepseek-ai/dsh-tools": {
+      "optional": true
+    },
+    "@deepseek-ai/dsh-web": {
+      "optional": true
+    },
+    "@deepseek-ai/schemastery": {
+      "optional": true
+    }
+  },
+  "files": [
+    "lib/",
+    "test/",
+    "README.md",
+    "INSTALL.md",
+    "INSTALL.patch.yml",
+    "LICENSE"
+  ],
+  "keywords": [
+    "dsh",
+    "cordis",
+    "web-search",
+    "cleversee",
+    "iqs",
+    "aliyun"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/greatZhaoFD/dsh-tool-cleversee.git"
+  },
+  "homepage": "https://github.com/greatZhaoFD/dsh-tool-cleversee#readme",
+  "bugs": {
+    "url": "https://github.com/greatZhaoFD/dsh-tool-cleversee/issues"
+  },
+  "scripts": {
+    "test": "node test/offline.test.mjs && node test/record.test.mjs",
+    "test:live": "node test/live.test.mjs live"
+  }
+}

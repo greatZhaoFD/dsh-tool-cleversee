@@ -1,0 +1,25 @@
+# Append to the desktop profile's cordis.patch.yml to opt in.
+# The default DSH web_search provider is not changed.
+# Supply CLEVERSEE_API_KEY through the DSH credential store or launch environment.
+# Never put a real API key in this file.
+
+- insert:
+    - id: tool-cleversee
+      name: dsh-tool-cleversee
+      config:
+        apiKeyEnv: CLEVERSEE_API_KEY
+        textEngineType: CNLiteBasic
+        imageEngineType: MultimodalSpeed
+        numResults: 8
+        imageMaxResults: 10
+        maxQueries: 4
+        maxSources: 20
+        maxCharsPerSource: 1200
+        timeoutMs: 20000
+        alsoRegisterProvider: false
+
+# Optional: explicitly select CleverSee for the default ctx.web provider.
+# Uncomment only if that behavior is desired and supported by the installed DSH version.
+# - id: web
+#   config:
+#     searchProvider: cleversee-web-search

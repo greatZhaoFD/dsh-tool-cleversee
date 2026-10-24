@@ -1,0 +1,16 @@
+node_modules/
+.env
+.env.*
+!.env.example
+*.log
+*.jsonl
+coverage/
+dist/
+.DS_Store
+Thumbs.db
+npm-debug.log*
+# Local release previews, backups, and runtime records
+*.tgz
+*.bak*
+*.tmp
+plugin-records/
